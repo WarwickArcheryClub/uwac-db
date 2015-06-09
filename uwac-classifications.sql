@@ -76,4 +76,17 @@ INSERT INTO "classifications" ("round_id", "bow_type", "gender", "class_3rd", "c
     (68, 1, 'M', 16, 41, NULL, NULL, NULL, NULL),
     (59, 1, 'M', 44, 92, NULL, NULL, NULL, NULL),
     (85, 1, 'M', 88, 157, NULL, NULL, NULL, NULL),
-    (96, 1, 'M', 145, NULL, NULL, NULL, NULL, NULL);
+    (96, 1, 'M', 145, NULL, NULL, NULL, NULL, NULL),
+    (37, 1, 'M', 191, 328, 536, 754, 858, 982),
+    (61, 1, 'M', 224, 391, 634, NULL, NULL, NULL),
+    (62, 1, 'M', 306, 512, NULL, NULL, NULL, NULL),
+    (63, 1, 'M', 536, NULL, NULL, NULL, NULL, NULL),
+    (36, 1, 'M', 199, 337, NULL, NULL, NULL, NULL),
+    (35, 1, 'M', 47, 110, 232, NULL, NULL, NULL),
+    (100, 1, 'M', 82, 172, NULL, NULL, NULL, NULL),
+    (108, 1, 'M', 70, NULL, NULL, NULL, NULL, NULL),
+    (51, 1, 'M', 31, 77, 175, 293, NULL, NULL),
+    (52, 1, 'M', 64, 141, 272, NULL, NULL, NULL),
+    (53, 1, 'M', 114, 217, NULL, NULL, NULL, NULL),
+    (54, 1, 'M', 198, NULL, NULL, NULL, NULL, NULL),
+    (73, 1 'M', 160, NULL, NULL, NULL, NULL, NULL);
