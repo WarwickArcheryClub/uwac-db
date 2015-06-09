@@ -8,10 +8,6 @@
 
 -- Create enums
 
-CREATE TYPE GENDER AS ENUM ('M', 'F');
-CREATE TYPE ROUND_TYPE AS ENUM ('Metric', 'Imperial', 'FITA/WA Outdoors', 
-    'FITA/WA Indoors', 'Clout', 'Indoors');
-CREATE TYPE SCORING_ZONES AS ENUM ('5', '10');
 CREATE TYPE CATEGORY AS ENUM ('Novice', 'Experienced');
 
 -- Create tables
