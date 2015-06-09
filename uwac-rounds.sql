@@ -128,8 +128,11 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (105, 'Double FITA/WA Ladies', 'FITA/WA Outdoors', 288, 2880, '10'),
     (106, 'Double Clout 160m', 'Clout', 0, 0, '5'),
     (107, 'Frostbite', 'Metric', 36, 360, '10'),
-    (108, 'FITA/WA 50m', 'FITA/WA Outdoors', 72, 720, '10');
+    (108, 'FITA/WA 50m', 'FITA/WA Outdoors', 72, 720, '10'),
+    (109, 'Bristol I', 'Imperial', 144, 1296, '5'),
+    (110, 'St. Nicholas', 'Imperial', 84, 756, '5'),
+    (111, 'Junior Warwick', 'Imperial', 48, 432, '5');
 
 -- Update sequence of the primary key
 
-SELECT setval('rounds_id_seq', 108); -- Any rows added will have primary key ID of 109+
+SELECT setval('rounds_id_seq', 111); -- Any rows added will have primary key ID of 112+
