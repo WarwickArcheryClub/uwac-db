@@ -25,6 +25,7 @@ CREATE TABLE "classifications" (
 
 -- Insert classifications
 
+-- Barebow classifications
 INSERT INTO "classifications" ("round_id", "bow_type", "gender", "class_3rd", "class_2nd", "class_1st", 
     "class_bm", "class_mb", "class_gmb") VALUES
     (89, 1, 'M', 69, 158, 335, 543, 668, 813),
@@ -104,3 +105,28 @@ INSERT INTO "classifications" ("round_id", "bow_type", "gender", "class_3rd", "c
     (55, 1, 'F', 205, NULL, NULL, NULL, NULL, NULL),
     (73, 1, 'F', 90, 160, NULL, NULL, NULL, NULL),
     (75, 1, 'F', 108, NULL, NULL, NULL, NULL, NULL);
+
+    -- Compound classifications
+INSERT INTO "classifications" ("round_id", "bow_type", "gender", "class_3rd", "class_2nd", "class_1st", 
+    "class_bm", "class_mb", "class_gmb") VALUES
+    (89, 2, 'M', 574, 865, 996, 1134, 1206, 1249),
+    (109, 2, 'M', 780, 1010, 1105, NULL, NULL, NULL),
+    (26, 2, 'M', 955, 1119, NULL, NULL, NULL, NULL),
+    (27, 2, 'M', 1060, NULL, NULL, NULL, NULL, NULL),
+    (82, 2, 'M', 487, 689, 777, 870, NULL, NULL),
+    (22, 2, 'M', 629, 785, 849, NULL, NULL, NULL),
+    (87, 2, 'M', 743, 856, NULL, NULL, NULL, NULL),
+    (81, 2, 'M', 820, NULL, NULL, NULL, NULL, NULL),
+    (69, 2, 'M', 356, 560, 652, 748, NULL, NULL),
+    (60, 2, 'M', 508, 666, 731, NULL, NULL, NULL),
+    (86, 2, 'M', 625, 739, NULL, NULL, NULL, NULL),
+    (80, 2, 'M', 697, NULL, NULL, NULL, NULL, NULL),
+    (23, 2, 'M', 619, 713, NULL, NULL, NULL, NULL),
+    (67, 2, 'M', 249, 406, 478, 554, NULL, NULL),
+    (58, 2, 'M', 361, 487, 539, NULL, NULL, NULL),
+    (66, 2, 'M', 459, 549, NULL, NULL, NULL, NULL),
+    (79, 2, 'M', 514, NULL, NULL, NULL, NULL, NULL),
+    (68, 2, 'M', 178, 280, NULL, NULL, NULL, NULL),
+    (59, 2, 'M', 254, 333, NULL, NULL, NULL, NULL),
+    (85, 2, 'M', 312, 370, NULL, NULL, NULL, NULL),
+    (96, 2, 'M', 348, NULL, NULL, NULL, NULL, NULL);
