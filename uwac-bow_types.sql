@@ -5,17 +5,17 @@ DROP TABLE IF EXISTS "bow_types" CASCADE;
 -- Create table
 
 CREATE TABLE "bow_types" (
-	"id" SERIAL NOT NULL PRIMARY KEY,
-	"name" VARCHAR(255) NOT NULL
+    "id" SERIAL NOT NULL PRIMARY KEY,
+    "name" VARCHAR(255) NOT NULL
 );
 
 -- Insert bow types
 
 INSERT INTO "bow_types" ("id", "name") VALUES
-	(1, 'Barebow'),
-	(2, 'Compound'),
-	(3, 'Longbow'),
-	(4, 'Recurve');
+    (1, 'Barebow'),
+    (2, 'Compound'),
+    (3, 'Longbow'),
+    (4, 'Recurve');
 
 -- Update sequence of the primary key
 
