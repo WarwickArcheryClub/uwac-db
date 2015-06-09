@@ -1,0 +1,135 @@
+-- Drop table annd enums
+
+DROP TYPE IF EXISTS SCORING_ZONES CASCADE;
+DROP TYPE IF EXISTS ROUND_TYPE CASCADE;
+
+DROP TABLE IF EXISTS "rounds" CASCADE;
+
+-- Create associated enums
+
+CREATE TYPE ROUND_TYPE AS ENUM ('Metric', 'Imperial', 'FITA/WA Outdoors', 'FITA/WA Indoors', 
+    'Clout', 'Indoors');
+CREATE TYPE SCORING_ZONES AS ENUM ('5', '10');
+
+-- Create table
+
+CREATE TABLE "rounds" (
+    "id" SERIAL NOT NULL PRIMARY KEY,
+    "name" VARCHAR(255) NOT NULL,
+    "type" ROUND_TYPE NOT NULL,
+    "max_hits" INTEGER NOT NULL,
+    "max_score" INTEGER NOT NULL,
+    "scoring_zones" SCORING_ZONES NOT NULL
+);
+
+-- Insert rounds
+
+INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zones") VALUES
+    (1, '100yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (2, '10m 80cm 10 Zone', 'Metric', 36, 360, '10'),
+    (3, '10yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (4, '15m 80cm 10 Zone', 'Metric', 36, 360, '10'),
+    (5, '15yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (6, '20m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (7, '20m 80cm 10 Zone', 'Metric', 36, 360, '10'),
+    (8, '20yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (9, '30m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (10, '30m 80m 10 Zone', 'Metric', 36, 360, '10'),
+    (11, '30yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (12, '40m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (13, '40m 80cm 10 Zone', 'Metric', 36, 360, '10'),
+    (14, '40yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (15, '50m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (16, '50m 80cm 10 Zone', 'Metric', 36, 360, '10'),
+    (17, '60m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (18, '60yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (19, '70m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (20, '80yds 5 Zone', 'Imperial', 36, 324, '5'),
+    (21, '90m 122cm 10 Zone', 'Metric', 36, 360, '10'),
+    (22, 'Albion', 'Imperial', 108, 972, '5'),
+    (23, 'American', 'Imperial', 90, 810, '5'),
+    (24, 'Bray I', 'Indoors', 30, 300, '10'),
+    (25, 'Bray II', 'Indoors', 30, 300, '10'),
+    (26, 'Bristol II', 'Imperial', 144, 1296, '5'),
+    (27, 'Bristol III', 'Imperial', 144, 1296, '5'),
+    (28, 'Bristol IV', 'Imperial', 144, 1296, '5'),
+    (29, 'Bristol V', 'Imperial', 144, 1296, '5'),
+    (30, 'Clout', 'Clout', 0, 0, '5'),
+    (31, 'Combined FITA', 'FITA/WA Indoors', 120, 1200, '10'),
+    (32, 'Double Clout', 'Clout', 0, 0, '5'),
+    (33, 'FITA/WA 18', 'FITA/WA Indoors', 60, 600, '10'),
+    (34, 'FITA/WA 25', 'FITA/WA Indoors', 60, 600, '10'),
+    (35, 'FITA/WA 70m', 'FITA/WA Outdoors', 72, 720, '10'),
+    (36, 'FITA/WA 900', 'FITA/WA Outdoors', 90, 900, '10'),
+    (37, 'FITA/WA Gents', 'FITA/WA Outdoors', 144, 1440, '10'),
+    (38, 'FITA/WA Ladies', 'FITA/WA Outdoors', 144, 1440, '10'),
+    (39, 'Half FITA/WA Gents', 'FITA/WA Outdoors', 72, 720, '10'),
+    (40, 'Half FITA/WA Ladies', 'FITA/WA Outdoors', 72, 720, '10'),
+    (42, 'Half Metric I', 'Metric', 72, 720, '10'),
+    (43, 'Half Metric II', 'Metric', 72, 720, '10'),
+    (44, 'Half Metric III', 'Metric', 72, 720, '10'),
+    (45, 'Half Metric IV', 'Metric', 72, 720, '10'),
+    (46, 'Half Metric V', 'Metric', 72, 720, '10'),
+    (47, 'Hereford', 'Imperial', 144, 1296, '5'),
+    (48, 'Junior National', 'Imperial', 72, 648, '5'),
+    (49, 'Junior Western', 'Imperial', 96, 864, '5'),
+    (50, 'Junior Windsor', 'Imperial', 108, 972, '5'),
+    (51, 'Long Metric Gents', 'Metric', 72, 720, '10'),
+    (52, 'Long Metric I', 'Metric', 72, 720, '10'),
+    (53, 'Long Metric II', 'Metric', 72, 720, '10'),
+    (54, 'Long Metric III', 'Metric', 72, 720, '10'),
+    (55, 'Long Metric IV', 'Metric', 72, 720, '10'),
+    (56, 'Long Metric Ladies', 'Metric', 72, 720, '10'),
+    (57, 'Long Metric V', 'Metric', 72, 720, '10'),
+    (58, 'Long National', 'Imperial', 72, 648, '5'),
+    (59, 'Long Warwick', 'Imperial', 48, 432, '5'),
+    (60, 'Long Western', 'Imperial', 96, 864, '5'),
+    (61, 'Metric I', 'Metric', 144, 1440, '10'),
+    (62, 'Metric II', 'Metric', 144, 1440, '10'),
+    (63, 'Metric III', 'Metric', 144, 1440, '10'),
+    (64, 'Metric IV', 'Metric', 144, 1440, '10'),
+    (65, 'Metric V', 'Metric', 144, 1440, '10'),
+    (66, 'National', 'Imperial', 72, 648, '5'),
+    (67, 'New National', 'Imperial', 72, 648, '5'),
+    (68, 'New Warwick', 'Imperial', 48, 432, '5'),
+    (69, 'New Western', 'Imperial', 96, 864, '5'),
+    (70, 'Porstmouth', 'Indoors', 60, 600, '10'),
+    (71, 'Short Junior National', 'Imperial', 72, 648, '5'),
+    (72, 'Short Junior Western', 'Imperial', 96, 864, '5'),
+    (73, 'Short Metric', 'Metric', 72, 720, '10'),
+    (74, 'Short Metric I', 'Metric', 72, 720, '10'),
+    (75, 'Short Metric II', 'Metric', 72, 720, '10'),
+    (76, 'Short Metric III', 'Metric', 72, 720, '10'),
+    (77, 'Short Metric IV', 'Metric', 72, 720, '10'),
+    (78, 'Short Metric V', 'Metric', 72, 720, '10'),
+    (79, 'Short National', 'Imperial', 72, 648, '5'),
+    (80, 'Short Western', 'Imperial', 96, 864, '5'),
+    (81, 'Short Windsor', 'Imperial', 108, 972, '5'),
+    (82, 'St. George', 'Imperial', 108, 972, '5'),
+    (83, 'Stafford', 'Indoors', 72, 720, '10'),
+    (84, 'FITA/WA Standard', 'FITA/WA Outdoors', 72, 720, '10'),
+    (85, 'Warwick', 'Imperial', 48, 432, '5'),
+    (86, 'Western', 'Imperial', 96, 864, '5'),
+    (87, 'Windsor', 'Imperial', 108, 972, '5'),
+    (88, 'Worcester', 'Indoors', 60, 300, '5'),
+    (89, 'York', 'Imperial', 144, 1296, '5'),
+    (90, 'Vegas', 'Indoors', 60, 600, '10'),
+    (91, 'Clout 165m', 'Clout', 0, 0, '5'),
+    (92, 'Clout 125m', 'Clout', 0, 0, '5'),
+    (93, 'Clout 100m', 'Clout', 0, 0, '5'),
+    (94, 'Double Porstmouth', 'Indoors', 120, 1200, '10'),
+    (96, 'Short Warwick', 'Imperial', 48, 432, '5'),
+    (97, 'Double York', 'Imperial', 288, 2592, '5'),
+    (98, 'Double Hereford', 'Imperial', 288, 2592, '5'),
+    (99, '50yds 10 Zone', 'Imperial', 36, 360, '10'),
+    (100, 'FITA/WA 60m', 'FITA/WA Outdoors', 72, 720, '10'),
+    (103, 'Double FITA/WA Gents', 'FITA/WA Outdoors', 288, 2880, '10'),
+    (104, 'Double One-way Clout 180yds', 'Clout', 0, 0, '5'),
+    (105, 'Double FITA/WA Ladies', 'FITA/WA Outdoors', 288, 2880, '10'),
+    (106, 'Double Clout 160m', 'Clout', 0, 0, '5'),
+    (107, 'Frostbite', 'Metric', 36, 360, '10'),
+    (108, 'FITA/WA 50m', 'FITA/WA Outdoors', 72, 720, '10');
+
+-- Update sequence of the primary key
+
+SELECT setval('rounds_id_seq', 108); -- Any rows added will have primary key ID of 109+
