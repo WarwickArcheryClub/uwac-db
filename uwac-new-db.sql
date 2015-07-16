@@ -18,7 +18,8 @@ CREATE TABLE "archers" (
     "last_name" VARCHAR(255) NOT NULL,
     "gender" GENDER NOT NULL,
     "email" VARCHAR(255) DEFAULT NULL,
-    "card_number" VARCHAR(7) DEFAULT NULL
+    "card_number" VARCHAR(7) DEFAULT NULL,
+    "agb_card" VARCHAR(10) DEFAULT NULL,
 );
 
 CREATE TABLE "events" (
