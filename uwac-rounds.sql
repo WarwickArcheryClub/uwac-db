@@ -132,8 +132,10 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (109, 'Clout 180yds', 'Clout', 0, 0, '5'),
     (110, 'Bristol I', 'Imperial', 144, 1296, '5'),
     (111, 'St. Nicholas', 'Imperial', 84, 756, '5'),
-    (112, 'Junior Warwick', 'Imperial', 48, 432, '5');
+    (112, 'Junior Warwick', 'Imperial', 48, 432, '5'),
+    (113, 'Short Junior Windsor', 'Imperial', 108, 972, '5'),
+    (114, 'Short Junior Warwick', 'Imperial', 48, 432, '5');
 
 -- Update sequence of the primary key
 
-SELECT setval('rounds_id_seq', 112); -- Any rows added will have primary key ID of 112+
+SELECT setval('rounds_id_seq', 114); -- Any rows added will have primary key ID of 112+
