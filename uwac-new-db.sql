@@ -12,16 +12,6 @@ CREATE TYPE CATEGORY AS ENUM ('Novice', 'Experienced');
 
 -- Create tables
 
-CREATE TABLE "archers" (
-    "id" SERIAL PRIMARY KEY,
-    "first_name" VARCHAR(255) NOT NULL,
-    "last_name" VARCHAR(255) NOT NULL,
-    "gender" GENDER NOT NULL,
-    "email" VARCHAR(255) DEFAULT NULL,
-    "card_number" VARCHAR(7) DEFAULT NULL,
-    "agb_card" VARCHAR(10) DEFAULT NULL,
-);
-
 CREATE TABLE "events" (
     "id" SERIAL PRIMARY KEY,
     "name" VARCHAR(255) NOT NULL
