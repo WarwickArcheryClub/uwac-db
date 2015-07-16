@@ -55,7 +55,7 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (28, 'Bristol IV', 'Imperial', 144, 1296, '5'),
     (29, 'Bristol V', 'Imperial', 144, 1296, '5'),
     (30, 'Clout', 'Clout', 0, 0, '5'),
-    (31, 'Combined FITA', 'WA Indoors', 120, 1200, '10'),
+    (31, 'Combined WA 18/25', 'WA Indoors', 120, 1200, '10'),
     (32, 'Double Clout', 'Clout', 0, 0, '5'),
     (33, 'WA 18m', 'WA Indoors', 60, 600, '10'),
     (34, 'WA 25m', 'WA Indoors', 60, 600, '10'),
