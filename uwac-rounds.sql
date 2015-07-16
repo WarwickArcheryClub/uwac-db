@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS "rounds" CASCADE;
 
 -- Create associated enums
 
-CREATE TYPE ROUND_TYPE AS ENUM ('Metric', 'Imperial', 'FITA/WA Outdoors', 'FITA/WA Indoors', 
+CREATE TYPE ROUND_TYPE AS ENUM ('Metric', 'Imperial', 'WA Outdoors', 'WA Indoors', 
     'Clout', 'Indoors');
 CREATE TYPE SCORING_ZONES AS ENUM ('5', '10');
 
@@ -55,16 +55,16 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (28, 'Bristol IV', 'Imperial', 144, 1296, '5'),
     (29, 'Bristol V', 'Imperial', 144, 1296, '5'),
     (30, 'Clout', 'Clout', 0, 0, '5'),
-    (31, 'Combined FITA', 'FITA/WA Indoors', 120, 1200, '10'),
+    (31, 'Combined FITA', 'WA Indoors', 120, 1200, '10'),
     (32, 'Double Clout', 'Clout', 0, 0, '5'),
-    (33, 'FITA/WA 18', 'FITA/WA Indoors', 60, 600, '10'),
-    (34, 'FITA/WA 25', 'FITA/WA Indoors', 60, 600, '10'),
-    (35, 'FITA/WA 70m', 'FITA/WA Outdoors', 72, 720, '10'),
-    (36, 'FITA/WA 900', 'FITA/WA Outdoors', 90, 900, '10'),
-    (37, 'FITA/WA Gents', 'FITA/WA Outdoors', 144, 1440, '10'),
-    (38, 'FITA/WA Ladies', 'FITA/WA Outdoors', 144, 1440, '10'),
-    (39, 'Half FITA/WA Gents', 'FITA/WA Outdoors', 72, 720, '10'),
-    (40, 'Half FITA/WA Ladies', 'FITA/WA Outdoors', 72, 720, '10'),
+    (33, 'WA 18m', 'WA Indoors', 60, 600, '10'),
+    (34, 'WA 25m', 'WA Indoors', 60, 600, '10'),
+    (35, 'WA 70m', 'WA Outdoors', 72, 720, '10'),
+    (36, 'WA 900', 'WA Outdoors', 90, 900, '10'),
+    (37, 'WA 1440 Gents', 'WA Outdoors', 144, 1440, '10'),
+    (38, 'WA 1440 Ladies', 'WA Outdoors', 144, 1440, '10'),
+    (39, 'Half WA 1440 Gents', 'WA Outdoors', 72, 720, '10'),
+    (40, 'Half WA 1440 Ladies', 'WA Outdoors', 72, 720, '10'),
     (42, 'Half Metric I', 'Metric', 72, 720, '10'),
     (43, 'Half Metric II', 'Metric', 72, 720, '10'),
     (44, 'Half Metric III', 'Metric', 72, 720, '10'),
@@ -107,7 +107,7 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (81, 'Short Windsor', 'Imperial', 108, 972, '5'),
     (82, 'St. George', 'Imperial', 108, 972, '5'),
     (83, 'Stafford', 'Indoors', 72, 720, '10'),
-    (84, 'FITA/WA Standard', 'FITA/WA Outdoors', 72, 720, '10'),
+    (84, 'WA Standard Bow Round', 'WA Outdoors', 72, 720, '10'),
     (85, 'Warwick', 'Imperial', 48, 432, '5'),
     (86, 'Western', 'Imperial', 96, 864, '5'),
     (87, 'Windsor', 'Imperial', 108, 972, '5'),
@@ -122,17 +122,18 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (97, 'Double York', 'Imperial', 288, 2592, '5'),
     (98, 'Double Hereford', 'Imperial', 288, 2592, '5'),
     (99, '50yds 10 Zone', 'Imperial', 36, 360, '10'),
-    (100, 'FITA/WA 60m', 'FITA/WA Outdoors', 72, 720, '10'),
-    (103, 'Double FITA/WA Gents', 'FITA/WA Outdoors', 288, 2880, '10'),
+    (100, 'WA 60m', 'WA Outdoors', 72, 720, '10'),
+    (103, 'Double WA Gents', 'WA Outdoors', 288, 2880, '10'),
     (104, 'Double One-way Clout 180yds', 'Clout', 0, 0, '5'),
-    (105, 'Double FITA/WA Ladies', 'FITA/WA Outdoors', 288, 2880, '10'),
+    (105, 'Double WA Ladies', 'WA Outdoors', 288, 2880, '10'),
     (106, 'Double Clout 160m', 'Clout', 0, 0, '5'),
     (107, 'Frostbite', 'Metric', 36, 360, '10'),
-    (108, 'FITA/WA 50m', 'FITA/WA Outdoors', 72, 720, '10'),
-    (109, 'Bristol I', 'Imperial', 144, 1296, '5'),
-    (110, 'St. Nicholas', 'Imperial', 84, 756, '5'),
-    (111, 'Junior Warwick', 'Imperial', 48, 432, '5');
+    (108, 'WA 50m', 'WA Outdoors', 72, 720, '10'),
+    (109, 'Clout 180yds', 'Clout', 0, 0, '5'),
+    (110, 'Bristol I', 'Imperial', 144, 1296, '5'),
+    (111, 'St. Nicholas', 'Imperial', 84, 756, '5'),
+    (112, 'Junior Warwick', 'Imperial', 48, 432, '5');
 
 -- Update sequence of the primary key
 
-SELECT setval('rounds_id_seq', 111); -- Any rows added will have primary key ID of 112+
+SELECT setval('rounds_id_seq', 112); -- Any rows added will have primary key ID of 112+
