@@ -93,7 +93,7 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (67, 'New National', 'Imperial', 72, 648, '5'),
     (68, 'New Warwick', 'Imperial', 48, 432, '5'),
     (69, 'New Western', 'Imperial', 96, 864, '5'),
-    (70, 'Porstmouth', 'Indoors', 60, 600, '10'),
+    (70, 'Portsmouth', 'Indoors', 60, 600, '10'),
     (71, 'Short Junior National', 'Imperial', 72, 648, '5'),
     (72, 'Short Junior Western', 'Imperial', 96, 864, '5'),
     (73, 'Short Metric', 'Metric', 72, 720, '10'),
