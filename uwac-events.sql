@@ -25,4 +25,4 @@ INSERT INTO "events" ("id", "name") VALUES
 
 -- Update sequence of primary ke
 
-SELECT setval('bow_types_id_seq', 10); -- Any rows added will have primary key ID of 10+
+SELECT setval('events_id_seq', 10); -- Any rows added will have primary key ID of 10+
