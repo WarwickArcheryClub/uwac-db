@@ -42,25 +42,31 @@ CREATE TABLE "scores_queue" (
 -- Create view to calculate individual records
 CREATE VIEW "individual_records" AS
 SELECT (a.first_name || ' ' || a.last_name) AS archer_name, s.score AS score,
-    r.id AS round_id, s.num_golds AS num_golds FROM scores AS s JOIN 
-        (SELECT MAX(score) AS max_score, round_id, category, bow_type FROM 
+    r.name AS round_name, s.num_golds AS num_golds, r.type AS round_type, 
+    b.name AS bow_type, a.gender AS gender, s.category AS category FROM scores 
+    AS s JOIN 
+        (SELECT MAX(score) AS score, round_id, category, bow_type FROM 
             scores JOIN archers ON archer_id=archers.id
-            WHERE archers.gender='M' 
+            WHERE archers.gender='M'
             GROUP BY round_id, category, bow_type)
-        AS b ON s.score=b.max_score AND s.category=b.category AND
-            s.round_id=b.round_id AND s.bow_type=b.bow_type
+        AS c USING (score, category, round_id, bow_type) 
         JOIN archers AS a ON a.id=s.archer_id
         JOIN rounds AS r ON r.id=s.round_id 
+        JOIN bow_types AS b ON b.id=s.bow_type
+        WHERE a.gender='M'
 UNION
 SELECT (a.first_name || ' ' || a.last_name) AS archer_name, s.score AS score,
-    r.id AS round_id, s.num_golds AS num_golds FROM scores AS s JOIN 
-        (SELECT MAX(score) AS max_score, round_id, category, bow_type FROM 
+    r.name AS round_name, s.num_golds AS num_golds, r.type AS round_type, 
+    b.name AS bow_type, a.gender AS gender, s.category AS category FROM scores 
+    AS s JOIN 
+        (SELECT MAX(score) AS score, round_id, category, bow_type FROM 
             scores JOIN archers ON archer_id=archers.id
-            WHERE archers.gender='F' 
+            WHERE archers.gender='F'
             GROUP BY round_id, category, bow_type)
-        AS b ON s.score=b.max_score AND s.category=b.category AND
-            s.round_id=b.round_id AND s.bow_type=b.bow_type
+        AS c USING (score, category, round_id, bow_type) 
         JOIN archers AS a ON a.id=s.archer_id
-        JOIN rounds AS r ON r.id=s.round_id
-ORDER BY score DESC, num_golds DESC;
+        JOIN rounds AS r ON r.id=s.round_id 
+        JOIN bow_types AS b ON b.id=s.bow_type
+        WHERE a.gender='F'
+ORDER BY round_name DESC, bow_type DESC, score DESC, num_golds DESC;
 
