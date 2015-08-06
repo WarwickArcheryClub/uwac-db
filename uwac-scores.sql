@@ -68,4 +68,3 @@ SELECT (a.first_name || ' ' || a.last_name) AS archer_name, s.score AS score,
         JOIN rounds AS r ON r.id=s.round_id 
         JOIN bow_types AS b ON b.id=s.bow_type
         WHERE a.gender='F';
-
