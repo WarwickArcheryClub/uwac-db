@@ -1,5 +1,5 @@
 -- This should be executed after 'uwac-classifications.sql' has been imported, as it contains
--- the necessary type defintion for this table to construct correctly.
+-- the necessary type definition for this table to construct correctly.
 
 -- Drop table
 
