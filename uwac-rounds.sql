@@ -34,7 +34,7 @@ INSERT INTO "rounds" ("id", "name", "type", "max_hits", "max_score", "scoring_zo
     (7, '20m 80cm 10 Zone', 'Metric', 36, 360, '10'),
     (8, '20yds 5 Zone', 'Imperial', 36, 324, '5'),
     (9, '30m 122cm 10 Zone', 'Metric', 36, 360, '10'),
-    (10, '30m 80m 10 Zone', 'Metric', 36, 360, '10'),
+    (10, '30m 80cm 10 Zone', 'Metric', 36, 360, '10'),
     (11, '30yds 5 Zone', 'Imperial', 36, 324, '5'),
     (12, '40m 122cm 10 Zone', 'Metric', 36, 360, '10'),
     (13, '40m 80cm 10 Zone', 'Metric', 36, 360, '10'),
