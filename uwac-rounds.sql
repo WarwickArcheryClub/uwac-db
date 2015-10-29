@@ -8,8 +8,8 @@ DROP TABLE IF EXISTS "rounds" CASCADE;
 -- Create associated enums
 
 CREATE TYPE ROUND_TYPE AS ENUM ('Metric', 'Imperial', 'WA Outdoors', 'WA Indoors', 
-    'Clout', 'Indoors');
-CREATE TYPE SCORING_ZONES AS ENUM ('5', '10');
+    'Clout', 'Indoors', 'Hit-Miss');
+CREATE TYPE SCORING_ZONES AS ENUM ('1', '5', '10');
 
 -- Create table
 
